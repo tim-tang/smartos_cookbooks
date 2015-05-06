@@ -1,8 +1,8 @@
 # Makefile for SmartOS Deployment
 #
-TAR=		gtar
-DISTNAME=	smartos_cookbooks.tar.gz
-SERVER_DEST=	1.2.3.4:/www/chef/
+TAR=tar
+DISTNAME=smartos_cookbooks.tar.gz
+SERVER_DEST=173.255.253.43:/srv/www/
 
 all: 	
 	$(TAR) cfz /tmp/$(DISTNAME) cookbooks
