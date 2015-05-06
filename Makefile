@@ -1,8 +1,8 @@
 # Makefile for SmartOS Deployment
 #
-TAR=tar
+TAR=gtar
 DISTNAME=smartos_cookbooks.tar.gz
-SERVER_DEST=173.255.253.43:/srv/www/
+SERVER_DEST=hash@173.255.253.43:/srv/www/smartos-cookbooks/
 
 all: 	
 	$(TAR) cfz /tmp/$(DISTNAME) cookbooks
@@ -12,6 +12,7 @@ all:
 	scp scripts/* $(SERVER_DEST)
 	scp keys/* $(SERVER_DEST)
 	scp smf/chef-solo.xml $(SERVER_DEST)
+	scp Chef-fatclient-SmartOS-10.14.2.tar.bz2 $(SERVER_DEST)
 
 
 nodes:
